@@ -4,6 +4,7 @@ import tensorflow as tf
 import os
 import shutil
 from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
 
 from sklearn.datasets import load_boston
 boston_dataset = load_boston()
@@ -64,6 +65,8 @@ tf.logging.set_verbosity(tf.logging.INFO)
 
 OUTDIR = 'boston_trained'
 
+plt.hist(df_train.MEDV)
+plt.show()
 
 tf.logging.set_verbosity(tf.logging.INFO)
 shutil.rmtree(OUTDIR, ignore_errors = True)
