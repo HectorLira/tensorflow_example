@@ -1,12 +1,12 @@
 import numpy as np
-import pandas as pd
-import tensorflow as tf
-import os
-import shutil
-from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
+import pandas as pd
+import shutil
+import tensorflow as tf
 
 from sklearn.datasets import load_boston
+from sklearn.model_selection import train_test_split
+
 boston_dataset = load_boston()
 boston = pd.DataFrame(boston_dataset.data, columns=boston_dataset.feature_names)
 boston['MEDV'] = boston_dataset.target
